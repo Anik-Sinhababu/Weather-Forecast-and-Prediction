@@ -164,8 +164,6 @@ if menu == "Weather Prediction And Visualization":
     countsnow = len(data[data.weather == 'snow'])
     countfog = len(data[data.weather == 'fog'])
     data = data.drop(['date'], axis=1)
-    IQR = data.quantile(0.75) - data.quantile(0.25)
-    data = data[~((data < (data.quantile(0.25) - 1.5 * IQR)) | (data > (data.quantile(0.75) + 1.5 * IQR))).any(axis=1)]
     import numpy as np
     data.precipitation = np.sqrt(data.precipitation)
     data.wind = np.sqrt(data.wind)
