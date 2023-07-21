@@ -157,7 +157,7 @@ if menu == "Weather Prediction And Visualization":
         st.pyplot(fig1)
     if graph == "Scatter Plot":
         fig4, ax = plt.subplots(figsize=(10, 5))
-        sns.scatterplot(data=data, x="date", y="temp_max", hue="wind")
+        sns.scatterplot(data=data, x="precipitation", y="temp_max", hue="wind")
         st.pyplot(fig4)
     if graph == "Pearson's Correlation":
         data.plot("precipitation", 'temp_max', style='o')
