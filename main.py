@@ -138,7 +138,7 @@ if menu == "Weather Prediction And Visualization":
         st.table(data.describe())
     st.header("Correlation Graph")
     fig3 = plt.figure(figsize=(12, 6))
-    sns.heatmap(data.corr(), annot=True, cmap='coolwarm')
+    sns.heatmap(data.corr(), cmap='coolwarm')
     st.pyplot(fig3)
     st.header("Graphs")
     graph = st.selectbox("Different Types Of Graphs",["Count Plot", "Scatter Plot", "Histogram Plot", "Pearson's Correlation"])
